@@ -1,0 +1,56 @@
+.notesListItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+
+  padding: 0.8rem 0.8rem 0.8rem 3.2rem;
+
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.notesListItem:hover {
+  background-color: var(--second-bg-color);
+}
+
+.noteInfo {
+  overflow: hidden;
+}
+
+.noteTitle {
+  font-size: 2rem;
+  font-weight: 600;
+
+  margin-bottom: 0.2rem;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+.noteContent {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+.noteDate {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.deleteNoteBtn {
+  border-radius: 50%;
+}
+
+.active {
+  background-color: var(--second-bg-color);
+}
+
+.noContent {
+  font-style: italic;
+}

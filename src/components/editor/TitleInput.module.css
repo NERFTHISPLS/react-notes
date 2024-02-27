@@ -1,0 +1,26 @@
+.inputContainer {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+
+  padding: 1.6rem;
+}
+
+.inputContainer label {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.inputContainer input {
+  flex: 1;
+
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--main-text-color);
+
+  padding-bottom: 0.8rem;
+
+  border-bottom: 2px solid var(--border-color);
+
+  background-color: var(--main-bg-color);
+}

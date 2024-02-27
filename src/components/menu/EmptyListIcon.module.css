@@ -1,0 +1,14 @@
+.emptyListContainer {
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+}
+
+.icon {
+  font-size: 6.2rem;
+}
+
+.emptyListText {
+  font-size: 1.6rem;
+  font-weight: 600;
+}

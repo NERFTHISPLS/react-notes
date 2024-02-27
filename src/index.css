@@ -1,0 +1,132 @@
+/* 
+  - Font sizes (px)
+  10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+  - Spacing system (px)
+  2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: #212529;
+  --second-bg-color: #343a40;
+  --main-text-color: #f8f9fa;
+  --second-text-color: #f1f3f5;
+  --border-color: #495057;
+  --btn-bg-color: #343a40;
+  --btn-hover-bg-color: #868e96;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  padding: 2.4rem;
+
+  font-family: 'Open Sans', sans-serif;
+  color: var(--main-text-color);
+  background-color: var(--main-bg-color);
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 24fr 76fr;
+  /* sreen_height - vertical_body_padding * 2 */
+  grid-template-rows: calc(100vh - 2.4rem * 2);
+
+  height: 100%;
+
+  border: 2px solid var(--border-color);
+  border-radius: 9px;
+
+  overflow: hidden;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  background: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0.8rem;
+
+  color: var(--main-text-color);
+
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--btn-hover-bg-color);
+  color: var(--second-text-color);
+}
+
+.material-symbols-outlined {
+  user-select: none;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #495057;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #868e96;
+  border-radius: 20px;
+}
+
+/* EDITOR STYLES */
+
+.wmde-markdown-var {
+  /* Need to set as important, because of the library inline styles */
+  height: 100% !important;
+  overflow-y: auto;
+}
+
+.w-md-editor-toolbar {
+  padding: 0.8rem;
+  background-color: var(--main-bg-color);
+}
+
+.w-md-editor-toolbar li > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.w-md-editor-toolbar svg {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+.w-md-editor-content {
+  background-color: var(--main-bg-color);
+}
+
+.w-md-editor-text {
+  /* Need to set as important, because of the library inline styles */
+  min-height: 100% !important;
+}
+
+.wmde-markdown {
+  background-color: var(--main-bg-color);
+}
