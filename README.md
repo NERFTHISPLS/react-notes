@@ -9,6 +9,8 @@ The project was initialized using [Vite](https://vitejs.dev/)
 3. After all required packages are installed type `npm run dev`.
 4. `npm run dev` will run the local server. To view the application go to the url which Vite will right for you in the terminal.
 
+## Or you can visit the website [here](https://nerfthispls.github.io/react-notes/)
+
 ## Features
 
 - Creating new notes
