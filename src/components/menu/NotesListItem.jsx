@@ -13,7 +13,7 @@ import {
 
 import styles from './NotesListItem.module.css';
 
-function NotesListItem({ note }) {
+function NotesListItem({ note, setIsMobileMenuOpen }) {
   const { currentNote, selectNote, deleteNote } = useNotes();
 
   const formattedTitle = formatNoTitle(note.title);
@@ -28,10 +28,15 @@ function NotesListItem({ note }) {
 
   const noteActiveClass = currentNote?.id === note.id ? styles.active : '';
 
+  const handleNoteSelection = noteId => {
+    selectNote(noteId);
+    setIsMobileMenuOpen(isOpened => !isOpened);
+  };
+
   return (
     <li
       className={`${styles.notesListItem} ${noteActiveClass}`}
-      onClick={() => selectNote(note.id)}
+      onClick={() => handleNoteSelection(note.id)}
     >
       <div className={styles.noteInfo}>
         <p className={`${styles.noteTitle} ${noTitleClass}`}>

@@ -4,13 +4,14 @@ import { useNotes } from '../../contexts/notes/useNotes';
 
 import styles from './Header.module.css';
 
-function Header() {
+function Header({ setIsMobileMenuOpen }) {
   const { addNote } = useNotes();
 
   const handleAddNote = () => {
     const noteId = uuidv4();
 
     addNote(noteId);
+    setIsMobileMenuOpen(isOpened => !isOpened);
   };
 
   return (

@@ -49,7 +49,7 @@ function reducer(state, action) {
       };
 
     default:
-      throw new Error('Unknown action type!');
+      throw new Error('Unknown action type of the notes reducer!');
   }
 }
 

@@ -4,13 +4,17 @@ import { useNotes } from '../../contexts/notes/useNotes';
 
 import styles from './NotesList.module.css';
 
-function NotesList() {
+function NotesList({ setIsMobileMenuOpen }) {
   const { notes } = useNotes();
 
   return (
     <ul className={styles.notesList}>
       {notes.map(note => (
-        <NotesListItem note={note} key={note.id} />
+        <NotesListItem
+          note={note}
+          setIsMobileMenuOpen={setIsMobileMenuOpen}
+          key={note.id}
+        />
       ))}
     </ul>
   );

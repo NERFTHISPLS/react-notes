@@ -1,0 +1,16 @@
+button.menuButtons {
+  display: none;
+
+  justify-self: start;
+  align-self: start;
+
+  margin: 0.8rem;
+
+  z-index: 9999;
+}
+
+@media (max-width: 52em) {
+  button.menuButtons {
+    display: block;
+  }
+}

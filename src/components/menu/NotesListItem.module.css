@@ -54,3 +54,13 @@
 .noContent {
   font-style: italic;
 }
+
+@media (max-width: 63em) {
+  .noteDate {
+    font-size: 1rem;
+  }
+
+  .deleteNoteBtn span {
+    font-size: 3rem;
+  }
+}

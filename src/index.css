@@ -40,6 +40,8 @@ input {
 }
 
 .container {
+  position: relative;
+
   display: grid;
   grid-template-columns: 24fr 76fr;
   /* sreen_height - vertical_body_padding * 2 */
@@ -77,6 +79,10 @@ input {
 }
 
 .material-symbols-outlined {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   user-select: none;
 }
 
@@ -129,4 +135,46 @@ input {
 
 .wmde-markdown {
   background-color: var(--main-bg-color);
+}
+
+@media (max-width: 63em) {
+  html {
+    font-size: 50%;
+  }
+
+  .btn {
+    padding: 0.2rem;
+  }
+}
+
+@media (max-width: 52em) {
+  html {
+    font-size: 45%;
+  }
+
+  .container {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+@media (max-width: 31em) {
+  body {
+    padding: 1rem;
+  }
+
+  .w-md-editor-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .w-md-editor-preview {
+    position: static;
+    border-top: 2px solid var(--border-color);
+  }
+
+  .w-md-editor-area,
+  .w-md-editor-preview {
+    width: 100%;
+  }
 }

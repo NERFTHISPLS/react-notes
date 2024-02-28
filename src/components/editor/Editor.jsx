@@ -13,7 +13,6 @@ function Editor() {
       onChange={newContent => changeNote('content', newContent)}
       visibleDragbar={false}
       textareaProps={{ placeholder: PLACEHOLDER_TEXT }}
-      autoFocus
     />
   );
 }
